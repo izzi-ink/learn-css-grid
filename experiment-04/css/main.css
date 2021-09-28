@@ -1,0 +1,413 @@
+/* Basic Aesthetic Styling */
+/* Main CSS for Izzi Ink */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    transition: all ease-in-out 250ms;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    background-color: #F2E9C2;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    /* hero xl */
+    text-align: start;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 4rem;
+    line-height: 4rem;
+    /* identical to box height, or 81% */
+    color: #D7CCC8;
+    padding-left: 2rem;
+
+}
+
+h2 {
+    /* hero xl */
+    /* h2 / xl */
+
+    text-align: left;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: #D7CCC8;
+
+    /* identical to box height, or 112% */
+
+
+
+}
+
+h3 {
+    /* hero xl */
+    /* h2 / xl */
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1rem;
+    /* identical to box height, or 112% */
+
+
+
+}
+
+p {
+
+    display: inline-block;
+    text-align: left;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #FFFFFF;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.5fr 1.3fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "header header header"
+        "hero hero hero"
+        "articles articles articles"
+        "footer footer footer";
+}
+
+.header {
+    grid-area: header;
+}
+
+
+.header {
+
+    box-shadow: 0px 0.525rem 0.25rem rgba(0, 0, 0, 0.25);
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #282828;
+    padding: 1rem 1.5rem;
+    /* border: rgb(202, 151, 151);
+    border-style: dotted; */
+
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #ffffff;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link {
+    font-weight: 600;
+    font-size: 1rem;
+    /* font-size: 1.6rem;
+    font-weight: 400; */
+    color: #ffffff;
+    padding-right: 2rem;
+}
+
+.nav-link:hover {
+    color: #F2E9C2;
+}
+
+.nav-logo {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+
+
+.hero {
+    display: grid;
+    grid-template-columns: 0.2fr 1.3fr 1.5fr;
+    grid-template-rows: 0.4fr 2.1fr 0.5fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". . ."
+        ". main-story character"
+        ". . character";
+    grid-area: hero;
+    padding: 0rem;
+}
+
+.main-story {
+    grid-area: main-story;
+    width: 40rem;
+    background-color: #2e2e2e;
+    padding: 0.5rem 2rem 2rem 0.5rem;
+    margin: -1rem;
+    border-color: #ffffff;
+    border-style: solid;
+    border-radius: 1rem;
+    box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.character {
+    grid-area: character;
+}
+
+/* at smaller screens this must perhaps be flex */
+.articles {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "doodles drawings books"
+        "doodles drawings books"
+        "doodles drawings books"
+        "footer footer footer";
+    grid-area: articles;
+    background-color: #282828;
+}
+
+.doodles {
+    grid-area: doodles;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.drawings {
+    grid-area: drawings;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.books {
+    grid-area: books;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #616161;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    display: inline-block;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    color: #FFFFFF;
+
+
+}
+
+/* start with media queries */
+
+/* media queries for menu responsiveness */
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 4rem;
+        flex-direction: column;
+        background-color: #2e2e2e;
+        width: 100%;
+        border-radius: 0px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0px 0.5rem 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* inside the Media Query. */
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .hero {
+        grid-area: hero;
+        background-image: none;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 2fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "header header header"
+            "articles articles articles"
+            "hero hero hero"
+            "footer footer footer";
+
+    }
+}
+
+/* 1. mobile devices */
+@media screen and (min-width : 320px) and (max-width : 480px) {
+    body {
+        background-color: #F28C8F;
+
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 2fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "header header header"
+            "articles articles articles"
+            "hero hero hero"
+            "footer footer footer";
+
+    }
+
+    .articles {
+        display: flex;
+        flex-direction: column;
+
+        grid-area: articles;
+        background-color: #282828;
+    }
+}
+
+/* 2. tablet devices */
+@media screen and (min-width : 481px) and (max-width : 768px) {
+    body {
+        background-color: #F2B8A4;
+
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 2fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "header header header"
+            "articles articles articles"
+            "hero hero hero"
+            "footer footer footer";
+
+    }
+
+    .articles {
+        display: flex;
+        flex-direction: column;
+
+        grid-area: articles;
+        background-color: #282828;
+    }
+
+}
+
+/* 3. small screens and laptops */
+@media screen and (min-width : 768px) and (max-width : 1024px) {
+    body {
+        background-color: #F3D2B5;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 2fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "header header header"
+            "articles articles articles"
+            "hero hero hero"
+            "footer footer footer";
+
+    }
+
+    .articles {
+        display: flex;
+        flex-direction: column;
+
+        grid-area: articles;
+        background-color: #282828;
+    }
+}
+
+/* 4. large screens and desktops */
+@media screen and (min-width : 1024px) {
+    body {
+        background-color: #558FA7;
+        ;
+    }
+}
+
+/* 5. extra large screens and televisions */
+@media screen and (min-width : 1284px) {
+    body {
+        background-color: #2D6072;
+        ;
+    }
+}
