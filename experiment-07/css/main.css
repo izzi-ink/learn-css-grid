@@ -97,14 +97,9 @@ p {
 
 .header {
     grid-area: header;
-}
-
-
-.header {
-
     box-shadow: 0px 0.525rem 0.25rem rgba(0, 0, 0, 0.25);
-
 }
+
 
 .navbar {
     display: flex;
@@ -112,8 +107,6 @@ p {
     align-items: center;
     background-color: #282828;
     padding: 1rem 1.5rem;
-    /* border: rgb(202, 151, 151);
-    border-style: dotted; */
 
 }
 
@@ -160,8 +153,6 @@ p {
     color: #ffffff;
 }
 
-
-
 .hero {
     display: grid;
     grid-template-columns: 0.2fr 1.3fr 1.5fr;
@@ -173,12 +164,15 @@ p {
         ". . character";
     grid-area: hero;
     padding: 0rem;
+    background: url(../img/diepte.svg) bottom left no-repeat fixed;
+    background-attachment: fixed;
 }
 
 .main-story {
     grid-area: main-story;
-    width: 40rem;
-    background-color: #2e2e2e;
+    width: 80rem;
+    background: url(../img/diepte.svg) bottom left no-repeat fixed;
+    background-attachment: fixed;
     padding: 0.5rem 2rem 2rem 0.5rem;
     margin: -1rem;
     border-color: #ffffff;
